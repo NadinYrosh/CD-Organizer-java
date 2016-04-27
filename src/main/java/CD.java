@@ -23,4 +23,12 @@ public class CD {
     public int getId(){
       return mId;
     }
+
+    public static CD find(int id){
+      try{
+        return instances.get(id -1);
+      }catch (IndexOutOfBoundsException e){
+        return null;
+      }
+    }
 }

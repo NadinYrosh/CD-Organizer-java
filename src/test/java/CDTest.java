@@ -34,6 +34,13 @@ public class CDTest {
     assertEquals(CD.all().size(), myCD.getId());
   }
 
+  @Test
+  public void find_returnsCDWithDesiredID_secondCD() {
+    CD firstCD = new CD("BackStreet Boys");
+    CD secondCD = new CD("Azzurro");
+    assertEquals(CD.find(secondCD.getId()), secondCD);
+  }
+
 
   // @Test
   // public void task_instantiatesCorrectly_true() {
