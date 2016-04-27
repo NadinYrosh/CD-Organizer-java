@@ -5,6 +5,7 @@ public class CD {
   private static ArrayList<CD> instances = new ArrayList<CD>();
   private String mTitle;
   private int mId;
+  private String mArtist;
   // private static ArrayList<Task> instances = new ArrayList<Task>();
     public CD (String title){
       mTitle = title;
@@ -34,5 +35,13 @@ public class CD {
 
     public static void clearCDArray(){
       instances.clear();
+    }
+
+    public void AddArtist(String artistName){
+      mArtist = artistName;
+    }
+
+    public String getArtist(){
+      return mArtist;
     }
 }

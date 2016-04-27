@@ -53,9 +53,10 @@ public class CDTest {
     assertEquals(CD.all().size(), 0);
   }
 
-  // @Test
-  // public void task_instantiatesCorrectly_true() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   assertEquals(true, myTask instanceof Task);
-  // }
+  @Test
+  public void addArtist_correctlyAddArtistNameToCD(){
+    CD myCD = new CD ("Azzurro");
+    myCD.AddArtist("Adriano Celentano");
+    assertEquals("Adriano Celentano", myCD.getArtist());
+  }
 }
