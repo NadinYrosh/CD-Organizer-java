@@ -28,6 +28,11 @@ public class CDTest {
     assertTrue(CD.all().contains(secondCD));
   }
 
+  @Test
+  public void newId_cdInstantiatesWithId_true(){
+    CD myCD = new CD("BackStreet Boys");
+    assertEquals(CD.all().size(), myCD.getId());
+  }
 
 
   // @Test
