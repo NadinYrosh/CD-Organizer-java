@@ -41,6 +41,17 @@ public class CDTest {
     assertEquals(CD.find(secondCD.getId()), secondCD);
   }
 
+  @Test
+  public void find_returnsNullWhenNoCDFound_null() {
+    assertTrue(CD.find(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllCDFromArrayList_0(){
+    CD myCD = new CD("BackStreet Boys");
+    CD.clearCDArray();
+    assertEquals(CD.all().size(), 0);
+  }
 
   // @Test
   // public void task_instantiatesCorrectly_true() {

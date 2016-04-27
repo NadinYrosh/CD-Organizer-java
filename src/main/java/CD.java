@@ -31,4 +31,8 @@ public class CD {
         return null;
       }
     }
+
+    public static void clearCDArray(){
+      instances.clear();
+    }
 }
