@@ -14,10 +14,21 @@ public class CDTest {
     assertEquals(true, myCD instanceof CD);
   }
 
+  @Test
   public void get_Title_correctlyReturnTheTitle(){
     CD myCD = new CD("BackStreet Boys");
     assertEquals("BackStreet Boys", myCD.Get_Title());
   }
+
+  @Test
+  public void all_returnAllInstanceOfCD_true(){
+    CD firstCD = new CD("BackStreet Boys");
+    CD secondCD = new CD("Azzurro");
+    assertTrue(CD.all().contains(firstCD));
+    assertTrue(CD.all().contains(secondCD));
+  }
+
+
 
   // @Test
   // public void task_instantiatesCorrectly_true() {
